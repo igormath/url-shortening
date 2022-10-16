@@ -14,3 +14,75 @@ header {
     color: var(--grayish-violet);
     margin-top: 1.4rem;
 }
+
+.header__menu {
+    display: none;
+}
+
+@media (min-width: 1023px) {
+
+    header {
+        padding: 3rem 10rem 0;
+        justify-content: flex-start;
+    }
+
+    .header__bars {
+        display: none;
+    }
+
+    .header__menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3rem;
+    }
+
+    .header__menu__options,
+    .header__menu__buttons {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    .header__menu__options>li {
+        margin: 0 1rem;
+    }
+
+    .header__menu__options>li>a {
+        text-decoration: none;
+        color: var(--grayish-violet);
+        font-weight: 700;
+    }
+
+    .header__menu__options>li>a:hover {
+        color: var(--dark-violet);
+    }
+
+    .btn-login {
+        width: 8rem;
+        height: 3.5rem;
+        margin-right: 1.5rem;
+        color: var(--grayish-violet);
+        font-weight: 700;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn {
+        width: 8rem;
+        height: 3.5rem;
+        color: #fff;
+        font-weight: 700;
+        background-color: var(--cyan);
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        opacity: 0.5;
+    }
+}
