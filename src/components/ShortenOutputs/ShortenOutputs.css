@@ -1,0 +1,67 @@
+.shorten__container {
+    width: 90%;
+    height: 15rem;
+    margin: 0 auto 1rem;
+    border-radius: 6px;
+    background-color: #FFF;
+}
+
+.shorten__in,
+.shorten__out {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: .5rem;
+    padding: .9rem 1.5rem .9rem;
+    color: var(--dark-violet);
+}
+
+.separator {
+    border-top: 1px solid var(--white-ice);
+}
+
+.shorten__out {
+    color: var(--cyan);
+}
+
+.shorten__btn {
+    width: 90%;
+    height: 4rem;
+    display: block;
+    margin: .5rem auto 0;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+.shorten__btn-copied {
+    background-color: var(--dark-violet);
+}
+
+@media (min-width: 1024px) {
+    .shorten__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 7rem;
+        padding: 0 2rem;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .shorten__in {
+        min-width: 60%;
+        font-size: 1.7rem;
+    }
+
+    .shorten__out {
+        text-align: end;
+        font-size: 1.7rem;
+        min-width: 30%;
+    }
+
+    .shorten__btn {
+        width: 10%;
+        font-size: 1.6rem;
+    }
+}
