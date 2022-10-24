@@ -12,7 +12,6 @@ const Header = () => {
     };
 
     useEffect(() => {
-        console.log(toggleMenu);
     }, [toggleMenu]);
 
     return (
