@@ -61,13 +61,14 @@ header {
         margin: 0 1rem;
     }
 
-    .header__menu__options>li>a {
+    .header__menu__options>li>p {
         text-decoration: none;
         color: var(--grayish-violet);
         font-weight: 700;
+        cursor: pointer;
     }
 
-    .header__menu__options>li>a:hover {
+    .header__menu__options>li>p:hover {
         color: var(--dark-violet);
     }
 
