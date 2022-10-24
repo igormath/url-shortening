@@ -12,7 +12,6 @@ const Header = () => {
     };
 
     useEffect(() => {
-        console.log(toggleMenu);
     }, [toggleMenu]);
 
     return (
@@ -21,9 +20,9 @@ const Header = () => {
                 <h1 className="header__title">Shortly</h1>
                 <nav className="header__menu">
                     <ul className="header__menu__options">
-                        <li><a>Features</a></li>
-                        <li><a>Pricing</a></li>
-                        <li><a>Resources</a></li>
+                        <li><p>Features</p></li>
+                        <li><p>Pricing</p></li>
+                        <li><p>Resources</p></li>
                     </ul>
                     <ul className="header__menu__buttons">
                         <li><button className="btn-login">Login</button></li>

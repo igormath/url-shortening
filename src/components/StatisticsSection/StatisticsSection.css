@@ -30,8 +30,11 @@
 }
 
 .statistics__card img {
+    width: 30%;
+    padding: 18px;
+    border-radius: 50%;
     background-color: var(--very-dark-blue);
-    transform: translateY(-4rem);
+    transform: translateY(-6rem);
 }
 
 .statistics__card h4 {
@@ -102,6 +105,10 @@
     .statistics__card p {
         margin: 0;
         padding: 0;
+    }
+
+    .statistics__card img {
+        padding: 10px;
     }
 
 }

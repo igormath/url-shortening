@@ -6,9 +6,9 @@ const HiddenMenu = ({ hideToggle }) => {
             <div className="hidden__container" style={{ zIndex: 100 }}>
                 <nav className="hidden__menu">
                     <ul className="hidden__menu__options">
-                        <li><a>Features</a></li>
-                        <li><a>Pricing</a></li>
-                        <li><a>Resources</a></li>
+                        <li><p>Features</p></li>
+                        <li><p>Pricing</p></li>
+                        <li><p>Resources</p></li>
                     </ul>
                     <ul className="hidden__menu__btn">
                         <li><button className="btn-login">Login</button></li>
@@ -22,9 +22,9 @@ const HiddenMenu = ({ hideToggle }) => {
             <div className="hidden__container" style={{ zIndex: -100 }}>
                 <nav className="hidden__menu">
                     <ul className="hidden__menu__options">
-                        <li><a>Features</a></li>
-                        <li><a>Pricing</a></li>
-                        <li><a>Resources</a></li>
+                        <li><p>Features</p></li>
+                        <li><p>Pricing</p></li>
+                        <li><p>Resources</p></li>
                     </ul>
                     <ul className="hidden__menu__btn">
                         <li><button className="btn-login">Login</button></li>
