@@ -5,7 +5,7 @@
 
 .input__container {
     width: 90%;
-    height: 14rem;
+    height: 19rem;
     display: flex;
     flex-direction: column;
     border-radius: 7px;
@@ -13,13 +13,18 @@
     margin: 12vh auto 0;
     background-image: url("../../assets/bg-shorten-mobile.svg");
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: 23vw .1rem;
     background-color: var(--dark-violet);
     transform: translateY(-5rem);
 }
 
+.input__container-flex {
+    height: 50%;
+}
+
 .input__link {
-    height: 65%;
+    width: 100%;
+    height: 70%;
     padding: 0 1.5rem;
     border-radius: 7px;
     border: 0px solid var(--dark-violet);
@@ -28,9 +33,17 @@
     color: var(--grayish-violet);
 }
 
+.input__advice {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #CF6F6F;
+    margin-top: .4rem;
+    display: none;
+}
+
 .input__btn {
     width: 100%;
-    height: 50%;
+    height: 30%;
     font-size: 1.7rem;
     font-weight: 700;
     border-radius: 7px;
@@ -46,8 +59,14 @@
         background-image: url("../../assets/bg-shorten-desktop.svg");
     }
 
-    .input__link {
+    .input__container-flex {
         width: 80%;
+        height: 4rem;
+    }
+
+    .input__link {
+        width: 100%;
+        height: 100%;
     }
 
     .input__btn {

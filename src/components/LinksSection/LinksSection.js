@@ -9,13 +9,16 @@ const LinksSection = () => {
     const [linksOutputs, setLinksOutputs] = useState([]);
 
     const inputRef = useRef();
+    const adviceRef = useRef();
 
     const handleInput = () => {
         if (inputRef.current.value === "") {
             inputRef.current.style.border = "2px solid #CF6F6F";
+            console.log(adviceRef.current.className);
+            adviceRef.current.style.display = "block";
         } else {
-            console.log(inputRef.current.value);
             inputRef.current.style.borderColor = "var(--dark-violet)";
+            adviceRef.current.style.display = "none";
             fetch(`https://api.shrtco.de/v2/shorten?url=${inputRef.current.value}`)
                 .then(res => res.json())
                 .then(data => {
@@ -24,11 +27,14 @@ const LinksSection = () => {
                 .catch("There is an error!");
         }
     }
-    console.log(linksOutputs);
+
     return (
         <section className='links__section'>
             <div className='input__container'>
-                <input type="text" name="" id="" placeholder='Shorten a link here...' className='input__link' ref={inputRef} />
+                <div className='input__container-flex'>
+                    <input type="text" name="" id="" placeholder='Shorten a link here...' className='input__link' ref={inputRef} />
+                    <p className='input__advice' ref={adviceRef}>Please add a link</p>
+                </div>
                 <button className='input__btn btn' onClick={handleInput}>Shorten it!</button>
             </div>
             {(linksOutputs.length > 0) && <ShortenOutputs shortenLinks={linksOutputs} />}
