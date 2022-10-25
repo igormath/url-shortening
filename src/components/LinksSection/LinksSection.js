@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import ShortenOutputs from '../ShortenOutputs/ShortenOutputs';
 
@@ -6,7 +6,14 @@ import './LinksSection.css'
 
 const LinksSection = () => {
 
-    const [linksOutputs, setLinksOutputs] = useState([]);
+    const [linksOutputs, setLinksOutputs] = useState(() => {
+        return JSON.parse(localStorage.getItem('shortenedLinks')) || []
+    });
+
+    useEffect(() => {
+        localStorage.setItem('shortenedLinks', JSON.stringify(linksOutputs));
+
+    }, [linksOutputs]);
 
     const inputRef = useRef();
     const adviceRef = useRef();
@@ -14,7 +21,6 @@ const LinksSection = () => {
     const handleInput = () => {
         if (inputRef.current.value === "") {
             inputRef.current.style.border = "2px solid #CF6F6F";
-            console.log(adviceRef.current.className);
             adviceRef.current.style.display = "block";
         } else {
             inputRef.current.style.borderColor = "var(--dark-violet)";

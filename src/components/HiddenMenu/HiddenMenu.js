@@ -1,15 +1,20 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+
 import './HiddenMenu.css';
 
 const HiddenMenu = ({ hideToggle }) => {
 
     const hiddenRef = useRef();
 
-    if (hideToggle) {
-        hiddenRef.current.style.zIndex = "100";
-    } else {
-        hiddenRef.current.style.zIndex = "-100";
-    }
+    useEffect(() => {
+        if (hideToggle) {
+            hiddenRef.current.style.zIndex = "100";
+        } else {
+            hiddenRef.current.style.zIndex = "-100";
+        }
+
+    }, [hideToggle]);
+
 
     return (
         <div className="hidden__container" ref={hiddenRef}>
