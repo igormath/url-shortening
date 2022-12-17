@@ -2,6 +2,8 @@
 
 This is a solution to the [URL Shorting Landing Page](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G).
 
+[Live site URL](https://url-shortening-two.vercel.app/)
+
 ## Table of contents
 
 - [Overview](#overview)
